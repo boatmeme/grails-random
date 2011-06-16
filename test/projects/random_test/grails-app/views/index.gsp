@@ -82,6 +82,7 @@
         </div>
         <div id="pageBody">
             <h1>Welcome to Grails Random</h1>
+            <p><b>Using <random:whichRandom/></b></p>
             
             <p><b>Integers</b></p>
             

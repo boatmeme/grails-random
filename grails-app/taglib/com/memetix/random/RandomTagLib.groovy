@@ -85,4 +85,8 @@ class RandomTagLib {
         def random = randomService.draw(list)
         return random
     } 
+    
+    def whichRandom = { attrs ->
+        out << randomService.defaultRNG
+    }
 }

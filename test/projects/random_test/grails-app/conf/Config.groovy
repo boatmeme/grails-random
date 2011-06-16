@@ -88,3 +88,5 @@ log4j = {
 
     warn   'org.mortbay.log'
 }
+
+random.generator.default = "AES_COUNTER"
