@@ -6,7 +6,7 @@ This Grail plugin wraps the [Uncommons Maths Pseudo-Random Number Generators](ht
 
 * **MersenneTwisterRNG** - *default*
 
-`random.generator.default="MERSENNE_TWISTER"`
+        random.generator.default="MERSENNE_TWISTER"
 
     A Java port of the fast and reliable Mersenne Twister RNG originally developed by Makoto Matsumoto and Takuji Nishimura. It is faster than java.util.Random, does not have the same statistical flaws as that RNG and also has a long period (219937). The Mersenne Twister is an excellent general purpose RNG.
 
