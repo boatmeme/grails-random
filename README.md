@@ -1,4 +1,4 @@
-# Random - Grails Plugin for Generating Random Numbers
+# Random - Grails Plugin for Random Number Generation
 
 ## Description
 
