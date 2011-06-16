@@ -1,4 +1,6 @@
-# Grails Random
+# Random - Grails Plugin for Generating Random Numbers
+
+## Description
 
 This Grail plugin wraps the [Uncommons Maths Pseudo-Random Number Generators](http://maths.uncommons.org/) in convenient, easy-to-use services and taglibs.
 
@@ -43,5 +45,63 @@ This Grail plugin wraps the [Uncommons Maths Pseudo-Random Number Generators](ht
     *Config.groovy*:
 
         random.generator.default="CELLULAR_AUTOMATON"
+
+## Installation
+
+Enter your application directory and run the following from the command line: 
+
+    grails install-plugin random
+
+After you have installed the Random plugin in your application, I'd recommend you point your browser to the Plugin test page to verify all is working and familiarize yourself with the functionality it provides:
+
+    http://localhost:8080/myAppContext/random
+
+## Configuration
+
+The RandomPlugin may be configured with a single paramter, specified in your application's */grails-app/conf/Config.groovy*
+
+
+    random.generator.default	= 'NAME_OF_PNRG_ALGORITHM'	// The PNRG Algorithm to use by default
+
+***
+###  random.generator.default
+
+_**optional**_
+
+This the...blah...blah
+
+# RandomTagLib
+
+## Tags
+
+# RandomService
+
+## Services
+
+## Source Code @ GitHub
+
+The source code is available on GitHub at [https://github.com/boatmeme/grails-random](https://github.com/boatmeme/grails-random). 
+
+Find a bug? Fork it. Fix it. Issue a pull request.
+
+    git clone git://github.com/boatmeme/grails-random
+
+Contributions welcome!
+
+## Issue Tracking @ GitHub
+
+Issue tracking is also on GitHub at [https://github.com/boatmeme/grails-random/issues](https://github.com/boatmeme/grails-random/issues).
+
+Bug reports, Feature requests, and general inquiries welcome.
+
+## Contact
+
+Feel free to contact me by email (jonathan.griggs at gmail.com) or follow me on GitHub at [https://github.com/boatmeme](https://github.com/boatmeme).
+
+# Change Log
+
+## v0.1 - 2011.06.17
+
+* Initial release
 
 
