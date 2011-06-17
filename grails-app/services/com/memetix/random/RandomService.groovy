@@ -133,7 +133,8 @@ class RandomService implements InitializingBean {
     }
     
     def shuffle(List list, RandomNumberGenerator rng) {
-        return Collections.shuffle(list,rng.getRNG())
+        Collections.shuffle(list,rng.getRNG())
+        return list
     }
 }
 
