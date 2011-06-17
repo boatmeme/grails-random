@@ -2,7 +2,7 @@
 
 ## Description
 
-This Grail plugin wraps the high-performance, statistically sound [Uncommons Maths Pseudo-Random Number Generators](http://maths.uncommons.org/) in convenient, easy-to-use services and taglibs.
+This Grails plugin wraps the high-performance, statistically sound [Uncommons Maths Pseudo-Random Number Generators](http://maths.uncommons.org/) in convenient, easy-to-use services and taglibs.
 
 ## Why would I use this?
 
