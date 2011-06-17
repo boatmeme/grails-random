@@ -8,9 +8,9 @@ This Grails plugin wraps the high-performance, statistically sound [Uncommons Ma
 
 You may be asking yourself why you would ever install a highly specialized plugin when you can easily get a random number using java.util.Random with a single line of code. Although java.util.Random may suffice for many every-day randomization use-cases, there are at least 3 primary considerations to weigh when choosing to use this plugin (or the Uncommons Maths library):
 
-1. **Quality** - java.util.Random, while relatively fast, is inferior in the random quality of the numbers it generates. Over large distributions it exhibits significant periodic behavior that shatters any illusion of randomness, rendering it unsuitable for industrial-strength randomization purposes. The Uncommons Maths library provides five alternative algorithms that produce higher-quality random numbers than java.util.Random.
+1. **Quality** - java.util.Random, while relatively fast, is inferior in the random quality of the numbers it generates. Over large distributions it exhibits significant periodic behavior that shatters any illusion of randomness, rendering it unsuitable for industrial-strength randomization purposes. The Uncommons Maths library provides alternative algorithms that produce higher-quality random numbers than java.util.Random.
 
-2. **Speed** - core Java contains an alternative to java.util.Random in java.security.SecureRandom. While this class fills the quality gap, it does so at a cost - in speed. Using SecureRandom may be up to 60 times slower than java.util.Random. Again, this may be suitable for most casual random-number needs, but for industrial strength usage, it may well fall far short of performance requirements. The Uncommons Maths library provides five alternative algorithms that all perform faster than SecureRandom.
+2. **Speed** - core Java contains an alternative to java.util.Random in java.security.SecureRandom. While this class fills the quality gap, it does so at a cost - in speed. Using SecureRandom may be up to 60 times slower than java.util.Random. Again, this may be suitable for most casual random-number needs, but for industrial strength usage, it may well fall far short of performance requirements. The Uncommons Maths library provides alternative algorithms that all perform faster than SecureRandom.
 
 3. **Convenience** - the Random Grails plugin provides a taglib and a service, making it dead simple to add industrial-strength randomization wherever your application should need it. If you've identified a need for shuffling lists, drawing random objects from a collection, or generating a random number from a specified range, you might as well do it the right way. 
 
@@ -59,14 +59,6 @@ First, you may want to choose an algorithm. The Mersenne Twister is the default 
     *Config.groovy*:
 
         random.generator.default="XOR_SHIFT"
-
-* **Complementary-Multiply-With-Carry**
-
-    A Java implementation of a Complementary-Multiply-With-Carry (CMWC) RNG as described by George Marsaglia. It has an extremely long period (2131104) and performance comparable to the Mersenne Twister (though the Mersenne Twister has the advantage of only requiring 16 bytes of seed data rather than the 16 kilobytes required by the CMWC RNG).
-
-    *Config.groovy*:
-
-        random.generator.default="COMPLEMENTARY_MULTIPLY_WITH_CARRY"
 
 * **AES Counter**
 
