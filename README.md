@@ -88,6 +88,9 @@ First, you may want to choose an algorithm. The Mersenne Twister is the default 
 
 ## Tags
 
+All tags exist in the `random` namespace
+
+***
 ### nextInteger
 
 Returns a random integer
@@ -122,6 +125,7 @@ _Output 3_:
 
     3317
 
+***
 ### nextLong
 
 Returns a random long
@@ -156,6 +160,7 @@ _Output 3_:
 
     3000005023402523523
 
+***
 ### nextBoolean
 
 Returns a random boolean - i.e. flips a coin
@@ -172,6 +177,7 @@ _Output 1_:
 
     false
 
+***
 ### shuffle
 
 Shuffles a list and returns the shuffled list
@@ -189,6 +195,7 @@ _Output 1_:
 
     [7, 5, 1, 8, 3, 4, 6, 2, 10, 9]
 
+***
 ### draw
 
 Draws a random object from the provided list returns the object that was drawn
