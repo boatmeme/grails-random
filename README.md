@@ -219,7 +219,138 @@ _Output 1_:
 
 ## Services
 
-    TODO list of services and examples
+***
+### nextInteger
+
+_Overloads_
+`nextInteger()`
+`nextInteger(RandomNumberGenerator rng)`
+`nextInteger(int ceiling, RandomNumberGenerator rng)`
+`nextInteger(int floor, int ceiling,RandomNumberGenerator rng)`                  
+    
+Returns the next Integer from the random number generator. Optionally provide a floor, ceiling, or specific Random Number Generator to use.
+     
+_Parameters_
+
+* **ceiling** - _optional_ upper bound of the random number range. Non-inclusive. If a ceiling is specified without a floor, the floor becomes 0.
+* **floor** - _optional_ lower bound of the random number range. Inclusive.
+* **generator** - _optional_ String representing the name of the Random Number Generation algorithm or an instance of com.memetix.RandomNumberGenerator
+
+_Returns_
+     
+* A random int
+
+Example:
+
+    randomService?.nextInteger(400)
+
+_returns_
+
+    233
+
+_Overloads_
+`nextLong()`
+`nextLong(RandomNumberGenerator rng)`
+`nextLong(long ceiling, RandomNumberGenerator rng)`
+`nextLong(long floor,long ceiling,RandomNumberGenerator rng)`                         
+    
+Returns the next Long from the random number generator. Optionally provide a floor, ceiling, or specific Random Number Generator to use.
+     
+_Parameters_
+
+* **ceiling** - _optional_ upper bound of the random number range. Non-inclusive. If a ceiling is specified without a floor, the floor becomes 0.
+* **floor** - _optional_ lower bound of the random number range. Inclusive.
+* **generator** - _optional_ String representing the name of the Random Number Generation algorithm or an instance of com.memetix.RandomNumberGenerator
+
+_Returns_
+     
+* A random long
+
+Example:
+
+    randomService?.nextLong()
+
+_returns_
+
+    2528037343378495488
+
+***
+### nextDouble
+
+_Overloads_
+`nextDouble()`
+`nextDouble(RandomNumberGenerator rng)`                    
+    
+Returns the next Double from the random number generator. Optionally provide a specific Random Number Generator to use.
+     
+_Parameters_
+
+* **generator** - _optional_ String representing the name of the Random Number Generation algorithm or an instance of com.memetix.RandomNumberGenerator
+
+_Returns_
+     
+* A random double between 0.0 and 1.0
+
+Example:
+
+    randomService?.nextDouble()
+
+_returns_
+
+    0.56673834568494979785
+
+***
+### shuffle
+
+_Overloads_
+`shuffle(List list)`
+`shuffle(List list, RandomNumberGenerator rng)`                    
+    
+Randomly shuffles the elements of the provided list.
+     
+_Parameters_
+
+* **generator** - _optional_ String representing the name of the Random Number Generation algorithm or an instance of com.memetix.RandomNumberGenerator
+
+_Returns_
+     
+* A list that has had its contents shuffled randomly
+
+Example:
+
+    def list = [1,2,3,4,5,6,7,8,9,10]
+    randomService?.shuffle(list)
+
+_returns_
+
+    [2, 6, 4, 5, 7, 9, 3, 10, 1, 8]
+
+***
+### draw
+
+_Overloads_
+`draw(List list)`
+`draw(List list, RandomNumberGenerator rng)`                    
+    
+Returns a random item from the provided list
+     
+_Parameters_
+
+* **generator** - _optional_ String representing the name of the Random Number Generation algorithm or an instance of com.memetix.RandomNumberGenerator
+
+_Returns_
+     
+* An element from the provided list, selected at random
+
+Example:
+
+    def list = [1,2,3,4,5,6,7,8,9,10]
+    randomService?.draw(list)
+
+_returns_
+
+    7
+
 
 ## Source Code @ GitHub
 
