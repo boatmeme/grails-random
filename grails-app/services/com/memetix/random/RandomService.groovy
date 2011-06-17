@@ -138,11 +138,11 @@ class RandomService implements InitializingBean {
 }
 
 public enum RandomNumberGenerator {
-    MERSENNE_TWISTER(new MersenneTwisterRNG()),
-    XOR_SHIFT(new XORShiftRNG()),
-    COMPLEMENTARY_MULTIPLY_WITH_CARRY(new CMWC4096RNG()),
-    AES_COUNTER(new AESCounterRNG()),
-    CELLULAR_AUTOMATON(new CellularAutomatonRNG());
+    MERSENNE_TWISTER(new MersenneTwisterRNG(new SecureRandomSeedGenerator())),
+    XOR_SHIFT(new XORShiftRNG(new SecureRandomSeedGenerator())),
+    COMPLEMENTARY_MULTIPLY_WITH_CARRY(new CMWC4096RNG(new SecureRandomSeedGenerator())),
+    AES_COUNTER(new AESCounterRNG(new SecureRandomSeedGenerator())),
+    CELLULAR_AUTOMATON(new CellularAutomatonRNG(new SecureRandomSeedGenerator()));
     
     private final java.util.Random rng;
     
