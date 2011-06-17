@@ -14,7 +14,7 @@ You may be asking yourself why you would ever install a highly specialized plugi
 
 3. **Convenience** - the Random Grails plugin provides a taglib and a service, making it dead simple to add industrial-strength randomization wherever your application should need it. If you've identified a need for shuffling lists, drawing random objects from a collection, or generating a random number from a specified range, you might as well do it the right way. 
 
-I found myself using Uncommons Maths for reasons 1 and 2 when it became clear that the core Java randoms would not suffice for my [Random Bands](http://randombands.com) experiment. I decided to package this as a plugin for reason #3 so that others might benefit. I sure could've used this a few months back.
+I found myself using Uncommons Maths for reasons 1 and 2 when it became clear that the core Java randoms would not suffice for my [Random Bands](http://randombands.com) experiment. I decided to package this as a plugin for reason #3 so that others might benefit.
 
 ## Installation
 
