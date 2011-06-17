@@ -14,9 +14,11 @@ You may be asking yourself why you would ever install a highly specialized plugi
 
 3. **Convenience** - the Random Grails plugin provides a taglib and a service, making it dead simple to add industrial-strength randomization wherever your application should need it. If you've identified a need for shuffling lists, drawing random objects from a collection, or generating a random number from a specified range, you might as well do it the right way. 
 
-I found myself using Uncommons Maths for reasons 1 and 2 when it became clear that the core Java randoms would not suffice for my [Random Bands](http://randombands.com) experiment. I decided to package this as a plugin for reason #3 so that others might benefit. I sure could've used this a few months ago.
+I found myself using Uncommons Maths for reasons 1 and 2 when it became clear that the core Java randoms would not suffice for my [Random Bands](http://randombands.com) experiment. I decided to package this as a plugin for reason #3 so that others might benefit. I sure could've used this a few months back.
 
 ## Algorithms
+
+First, you may want to choose an algorithm. The Mersenne Twister is the default used by this plugin.
 
 * **MersenneTwisterRNG** - *default*
 
@@ -85,6 +87,35 @@ Setting this to the name of an Uncommons Maths PRNG algorithm (as listed above) 
 # RandomTagLib
 
 ## Tags
+
+### nextInteger
+
+_Example 1_:
+
+    <random:nextInteger/>
+
+_Output 1_:
+
+    134925
+
+_Example 2_:
+
+    <random:nextInteger ceiling="100"/>
+
+_Output 2_:
+
+    92
+
+_Example 3_:
+
+    <random:nextInteger ceiling="3500" floor="2500"/>
+
+_Output 3_:
+
+    3317
+
+
+
 
 # RandomService
 
