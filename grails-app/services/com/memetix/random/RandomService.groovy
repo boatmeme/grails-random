@@ -169,12 +169,12 @@ public enum RandomNumberGenerator {
         if(this==RandomNumberGenerator.MERSENNE_TWISTER)
             this.rng = new MersenneTwisterRNG();
         if(this==RandomNumberGenerator.XOR_SHIFT)
-            this.rng = new MersenneTwisterRNG();
+            this.rng = new XORShiftRNG();
         if(this==RandomNumberGenerator.COMPLEMENTARY_MULTIPLY_WITH_CARRY)
-            this.rng = new MersenneTwisterRNG();
+            this.rng = new CMWC4096RNG();
         if(this==RandomNumberGenerator.AES_COUNTER)
-            this.rng = new MersenneTwisterRNG();
+            this.rng = new AESCounterRNG();
         if(this==RandomNumberGenerator.CELLULAR_AUTOMATON)
-            this.rng = new MersenneTwisterRNG();
+            this.rng = new CellularAutomatonRNG();
     }
 }
