@@ -16,50 +16,6 @@ You may be asking yourself why you would ever install a highly specialized plugi
 
 I found myself using Uncommons Maths for reasons 1 and 2 when it became clear that the core Java randoms would not suffice for my [Random Bands](http://randombands.com) experiment. I decided to package this as a plugin for reason #3 so that others might benefit. I sure could've used this a few months back.
 
-## Algorithms
-
-First, you may want to choose an algorithm. The Mersenne Twister is the default used by this plugin.
-
-* **MersenneTwisterRNG** - *default*
-
-    A Java port of the fast and reliable Mersenne Twister RNG originally developed by Makoto Matsumoto and Takuji Nishimura. It is faster than java.util.Random, does not have the same statistical flaws as that RNG and also has a long period (219937). *The Mersenne Twister is an excellent general purpose RNG*.
-
-    *Config.groovy*:
-
-        random.generator.default="MERSENNE_TWISTER"
-
-* **XORShiftRNG**
-
-    A Java implementation of the very fast PRNG described by George Marsaglia. It has a period of about 2160, which although much shorter than the Mersenne Twister's, is still significantly longer than that of java.util.Random. *This is the RNG to use when performance is the primary concern. It can be up to twice as fast as the Mersenne Twister*.
-
-    *Config.groovy*:
-
-        random.generator.default="XOR_SHIFT"
-
-* **CMWC4096RNG**
-
-    A Java implementation of a Complementary-Multiply-With-Carry (CMWC) RNG as described by George Marsaglia. It has an extremely long period (2131104) and performance comparable to the Mersenne Twister (though the Mersenne Twister has the advantage of only requiring 16 bytes of seed data rather than the 16 kilobytes required by the CMWC RNG).
-
-    *Config.groovy*:
-
-        random.generator.default="COMPLEMENTARY_MULTIPLY_WITH_CARRY"
-
-* **AESCounterRNG**
-
-    This is a cryptographically-strong1 non-linear RNG that is around 10x faster than java.security.SecureRandom. Reverse-engineering the generator state from observations of its output would involve cracking the AES block cipher.
-
-     *Config.groovy*:
-
-        random.generator.default="AES_COUNTER"
-
-* **CellularAutomatonRNG**
-
-    A Java port of Tony Pasqualoni's fast Cellular Automaton RNG. It uses a 256-cell automaton to generate random values.
-
-    *Config.groovy*:
-
-        random.generator.default="CELLULAR_AUTOMATON"
-
 ## Installation
 
 Enter your application directory and run the following from the command line: 
@@ -82,13 +38,65 @@ The RandomPlugin may be configured with a single paramter, specified in your app
 
 _**optional**_
 
-Setting this to the name of an Uncommons Maths PRNG algorithm (as listed above) specifies which Random Number Generator to use as a default. You may still provide an instance of the com.memetix.random.RandomNumberGenerator to all of the service methods, this just determines which one will be used should you not provide it.
+Setting this to the name of an Uncommons Maths PRNG algorithm (as listed in the next section) specifies which Random Number Generator to use as a default. You may still provide an instance of the com.memetix.random.RandomNumberGenerator to all of the service methods, this just determines which one will be used should you not provide it.
+
+## Algorithms
+
+First, you may want to choose an algorithm. The Mersenne Twister is the default used by this plugin.
+
+* **Mersenne Twister** - *default*
+
+    A Java port of the fast and reliable Mersenne Twister RNG originally developed by Makoto Matsumoto and Takuji Nishimura. It is faster than java.util.Random, does not have the same statistical flaws as that RNG and also has a long period (219937). *The Mersenne Twister is an excellent general purpose RNG*.
+
+    *Config.groovy*:
+
+        random.generator.default="MERSENNE_TWISTER"
+
+* **XOR Shift**
+
+    A Java implementation of the very fast PRNG described by George Marsaglia. It has a period of about 2160, which although much shorter than the Mersenne Twister's, is still significantly longer than that of java.util.Random. *This is the RNG to use when performance is the primary concern. It can be up to twice as fast as the Mersenne Twister*.
+
+    *Config.groovy*:
+
+        random.generator.default="XOR_SHIFT"
+
+* **Complementary-Multiply-With-Carry**
+
+    A Java implementation of a Complementary-Multiply-With-Carry (CMWC) RNG as described by George Marsaglia. It has an extremely long period (2131104) and performance comparable to the Mersenne Twister (though the Mersenne Twister has the advantage of only requiring 16 bytes of seed data rather than the 16 kilobytes required by the CMWC RNG).
+
+    *Config.groovy*:
+
+        random.generator.default="COMPLEMENTARY_MULTIPLY_WITH_CARRY"
+
+* **AES Counter**
+
+    This is a cryptographically-strong1 non-linear RNG that is around 10x faster than java.security.SecureRandom. Reverse-engineering the generator state from observations of its output would involve cracking the AES block cipher.
+
+     *Config.groovy*:
+
+        random.generator.default="AES_COUNTER"
+
+* **Cellular Automaton**
+
+    A Java port of Tony Pasqualoni's fast Cellular Automaton RNG. It uses a 256-cell automaton to generate random values.
+
+    *Config.groovy*:
+
+        random.generator.default="CELLULAR_AUTOMATON"
 
 # RandomTagLib
 
 ## Tags
 
 ### nextInteger
+
+Prints a random integer
+
+_Parameters_
+
+* **ceiling** - _optional_ upper bound of the random number range. Non-inclusive. If a ceiling is specified without a floor, the floor becomes 0.
+* **floor** - _optional_ lower bound of the random number range. Inclusive.
+* **generator** - _optional_ String representing the name of the Random Number Generation algorithm or an instance of com.memetix.RandomNumberGenerator
 
 _Example 1_:
 
