@@ -6,7 +6,7 @@ This Grail plugin wraps the high-performance, statistically sound [Uncommons Mat
 
 ## Why would I use this?
 
-You may be asking yourself why you would ever install a highly specialized plugin when you can get a random number using java.util.Random, and a single line of code. Although java.util.Random may suffice for many every-day randomization use-cases, there are at least 3 primary considerations to weigh when choosing to use this plugin (or the Uncommons Maths library):
+You may be asking yourself why you would ever install a highly specialized plugin when you can easily get a random number using java.util.Random, and a single line of code. Although java.util.Random may suffice for many every-day randomization use-cases, there are at least 3 primary considerations to weigh when choosing to use this plugin (or the Uncommons Maths library):
 
 1. Quality - java.util.Random, while relatively fast, is inferior in the random quality of the numbers it generates. Over large distributions it exhibits significant periodic behavior that shatters any illusion of randomness, rendering it unsuitable for industrial-strength randomization purposes. The Uncommons Maths library provides five alternative algorithms that produce higher-quality random numbers than java.util.Random.
 
