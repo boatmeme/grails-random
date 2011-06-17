@@ -200,7 +200,7 @@ _Output 1_:
 ***
 ### draw
 
-Draws a random object from the provided list returns the object that was drawn
+Draws a random object from the provided list and returns the object that was drawn
 
 _Parameters_
 
