@@ -90,7 +90,7 @@ First, you may want to choose an algorithm. The Mersenne Twister is the default 
 
 ### nextInteger
 
-Prints a random integer
+Returns a random integer
 
 _Parameters_
 
@@ -122,12 +122,95 @@ _Output 3_:
 
     3317
 
+### nextLong
 
+Returns a random long
 
+_Parameters_
+
+* **ceiling** - _optional_ upper bound of the random number range. Non-inclusive. If a ceiling is specified without a floor, the floor becomes 0.
+* **floor** - _optional_ lower bound of the random number range. Inclusive.
+* **generator** - _optional_ String representing the name of the Random Number Generation algorithm or an instance of com.memetix.RandomNumberGenerator
+
+_Example 1_:
+
+    <random:nextLong/>
+
+_Output 1_:
+
+    -3462449385734449569
+
+_Example 2_:
+
+    <random:nextLong ceiling="100"/>
+
+_Output 2_:
+
+    77
+
+_Example 3_:
+
+    <random:nextLong ceiling="-3111111111111111111" floor="-3000000000000000000"/>
+
+_Output 3_:
+
+    3000005023402523523
+
+### nextBoolean
+
+Returns a random boolean - i.e. flips a coin
+
+_Parameters_
+
+* **generator** - _optional_ String representing the name of the Random Number Generation algorithm or an instance of com.memetix.RandomNumberGenerator
+
+_Example 1_:
+
+    <random:nextBoolean/>
+
+_Output 1_:
+
+    false
+
+### shuffle
+
+Shuffles a list and returns the shuffled list
+
+_Parameters_
+
+* **list** - a List of any type of object that you like shuffled in a random order
+* **generator** - _optional_ String representing the name of the Random Number Generation algorithm or an instance of com.memetix.RandomNumberGenerator
+
+_Example 1_:
+
+    <random:shuffle list="${[1,2,3,4,5,6,7,8,9,10]}"/>
+
+_Output 1_:
+
+    [7, 5, 1, 8, 3, 4, 6, 2, 10, 9]
+
+### draw
+
+Draws a random object from the provided list returns the object that was drawn
+
+_Parameters_
+
+* **list** - a List of any type of object from which you would like to draw a random item
+* **generator** - _optional_ String representing the name of the Random Number Generation algorithm or an instance of com.memetix.RandomNumberGenerator
+
+_Example 1_:
+
+    <random:draw list="${[1,2,3,4,5,6,7,8,9,10]}"/>
+
+_Output 1_:
+
+    4
 
 # RandomService
 
 ## Services
+
+    TODO list of services and examples
 
 ## Source Code @ GitHub
 
