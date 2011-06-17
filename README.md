@@ -88,7 +88,9 @@ First, you may want to choose an algorithm. The Mersenne Twister is the default 
 
 ## Tags
 
-All tags exist in the `random` namespace
+All tags exist in the `random` namespace and return Objects, which means you may call them as methods from within your own controllers and taglibs . For example:
+
+    def myShuffledList = random.shuffle(list:[1,2,3,4,5,6,7,8,9,10])
 
 ***
 ### nextInteger
