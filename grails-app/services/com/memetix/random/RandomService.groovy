@@ -138,29 +138,3 @@ class RandomService implements InitializingBean {
     }
 }
 
-public enum RandomNumberGenerator {
-    MERSENNE_TWISTER(new MersenneTwisterRNG()),
-    XOR_SHIFT(new XORShiftRNG()),
-    COMPLEMENTARY_MULTIPLY_WITH_CARRY(new MersenneTwisterRNG()),
-    AES_COUNTER(new AESCounterRNG()),
-    CELLULAR_AUTOMATON(new CellularAutomatonRNG());
-    
-    private final java.util.Random rng;
-    
-    RandomNumberGenerator(java.util.Random rng) {
-        this.rng = rng;
-    }
-    
-    public java.util.Random getRNG() {
-        return rng;
-    }
- 
-    public static RandomNumberGenerator fromString(final String pRandom) {
-        for (RandomNumberGenerator r : values()) {
-                if (r.toString().equalsIgnoreCase(pRandom)) {
-                        return r;
-                }
-        }
-        return null;
-    }
-}
