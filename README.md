@@ -241,6 +241,14 @@ Bug reports, Feature requests, and general inquiries welcome.
 
 Feel free to contact me by email (jonathan.griggs at gmail.com) or follow me on GitHub at [https://github.com/boatmeme](https://github.com/boatmeme).
 
+# Roadmap
+
+Future versions should include:
+
+* Ability to reseed the PRNGs
+* Ability to specify the SeedGenerator to use (i.e. Random.org, /dev/null, and SecureRandom)
+* Services that expose the Probability Distribution Wrappers (Uniform, Normal, Binomial, Poisson and Exponential)
+
 # Change Log
 
 ## v0.1 - 2011.06.17
