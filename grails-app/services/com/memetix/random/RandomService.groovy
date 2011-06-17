@@ -139,19 +139,20 @@ class RandomService implements InitializingBean {
 }
 
 public enum RandomNumberGenerator {
-    MERSENNE_TWISTER(new MersenneTwisterRNG()),
-    XOR_SHIFT(new XORShiftRNG()),
-    COMPLEMENTARY_MULTIPLY_WITH_CARRY(new CMWC4096RNG()),
-    AES_COUNTER(new AESCounterRNG()),
-    CELLULAR_AUTOMATON(new CellularAutomatonRNG());
+    MERSENNE_TWISTER,
+    XOR_SHIFT,
+    COMPLEMENTARY_MULTIPLY_WITH_CARRY,
+    AES_COUNTER,
+    CELLULAR_AUTOMATON
     
-    private final java.util.Random rng;
+    private java.util.Random rng;
     
-    RandomNumberGenerator(java.util.Random rng) {
-        this.rng = rng;
+    RandomNumberGenerator() {
     }
     
     public java.util.Random getRNG() {
+        if(rng==null)
+            constructRNG();
         return rng;
     }
  
@@ -162,5 +163,18 @@ public enum RandomNumberGenerator {
                 }
         }
         return null;
+    }
+    
+    private constructRNG() {
+        if(this==RandomNumberGenerator.MERSENNE_TWISTER)
+            this.rng = new MersenneTwisterRNG();
+        if(this==RandomNumberGenerator.XOR_SHIFT)
+            this.rng = new MersenneTwisterRNG();
+        if(this==RandomNumberGenerator.COMPLEMENTARY_MULTIPLY_WITH_CARRY)
+            this.rng = new MersenneTwisterRNG();
+        if(this==RandomNumberGenerator.AES_COUNTER)
+            this.rng = new MersenneTwisterRNG();
+        if(this==RandomNumberGenerator.CELLULAR_AUTOMATON)
+            this.rng = new MersenneTwisterRNG();
     }
 }
