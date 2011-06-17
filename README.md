@@ -223,10 +223,11 @@ _Output 1_:
 ### nextInteger
 
 _Overloads_
-`nextInteger()`
-`nextInteger(RandomNumberGenerator rng)`
-`nextInteger(int ceiling, RandomNumberGenerator rng)`
-`nextInteger(int floor, int ceiling,RandomNumberGenerator rng)`                  
+
+* `nextInteger()`
+* `nextInteger(RandomNumberGenerator rng)`
+* `nextInteger(int ceiling, RandomNumberGenerator rng)`
+* `nextInteger(int floor, int ceiling,RandomNumberGenerator rng)`                  
     
 Returns the next Integer from the random number generator. Optionally provide a floor, ceiling, or specific Random Number Generator to use.
      
@@ -249,10 +250,11 @@ _returns_
     233
 
 _Overloads_
-`nextLong()`
-`nextLong(RandomNumberGenerator rng)`
-`nextLong(long ceiling, RandomNumberGenerator rng)`
-`nextLong(long floor,long ceiling,RandomNumberGenerator rng)`                         
+
+* `nextLong()`
+* `nextLong(RandomNumberGenerator rng)`
+* `nextLong(long ceiling, RandomNumberGenerator rng)`
+* `nextLong(long floor,long ceiling,RandomNumberGenerator rng)`                         
     
 Returns the next Long from the random number generator. Optionally provide a floor, ceiling, or specific Random Number Generator to use.
      
@@ -278,8 +280,9 @@ _returns_
 ### nextDouble
 
 _Overloads_
-`nextDouble()`
-`nextDouble(RandomNumberGenerator rng)`                    
+
+* `nextDouble()`
+* `nextDouble(RandomNumberGenerator rng)`                    
     
 Returns the next Double from the random number generator. Optionally provide a specific Random Number Generator to use.
      
@@ -303,8 +306,9 @@ _returns_
 ### shuffle
 
 _Overloads_
-`shuffle(List list)`
-`shuffle(List list, RandomNumberGenerator rng)`                    
+
+* `shuffle(List list)`
+* `shuffle(List list, RandomNumberGenerator rng)`                    
     
 Randomly shuffles the elements of the provided list.
      
@@ -329,8 +333,9 @@ _returns_
 ### draw
 
 _Overloads_
-`draw(List list)`
-`draw(List list, RandomNumberGenerator rng)`                    
+
+* `draw(List list)`
+* `draw(List list, RandomNumberGenerator rng)`                    
     
 Returns a random item from the provided list
      
