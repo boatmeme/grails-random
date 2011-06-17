@@ -104,7 +104,7 @@ class RandomServiceTests extends GrailsUnitTestCase {
             assertTrue result < 20;
         }
     }
-    
+    /*
     void testGetInteger_COMPLEMENTARY_MULTIPLY_WITH_CARRY() {
         for(int i = 0; i<1000;i++) {
                 def result = randomService.nextInteger(10, RandomNumberGenerator.COMPLEMENTARY_MULTIPLY_WITH_CARRY)
@@ -117,7 +117,7 @@ class RandomServiceTests extends GrailsUnitTestCase {
             assertTrue result < 20;
         }
     }
-    
+    */
     void testGetInteger_AES_COUNTER() {
         for(int i = 0; i<1000;i++) {
                 def result = randomService.nextInteger(10, RandomNumberGenerator.AES_COUNTER)
@@ -190,7 +190,7 @@ class RandomServiceTests extends GrailsUnitTestCase {
             assertTrue result >= 1000;
         }
     }
-    
+    /*
     void testGetLong_COMPLEMENTARY_MULTIPLY_WITH_CARRY() {
         for(int i = 0; i<1000;i++) {
             def result = randomService.nextLong(10, RandomNumberGenerator.COMPLEMENTARY_MULTIPLY_WITH_CARRY)
@@ -203,6 +203,7 @@ class RandomServiceTests extends GrailsUnitTestCase {
             assertTrue result >= 1000;
         }
     }
+    */
     
     void testGetLong_AES_COUNTER() {
        for(int i = 0; i<1000;i++) {
@@ -263,7 +264,7 @@ class RandomServiceTests extends GrailsUnitTestCase {
             assertTrue result >= 0.0;
         }
     }
-    
+    /*
     void testGetDouble_COMPLEMENTARY_MULTIPLY_WITH_CARRY() {
         for(int i = 0; i<1000;i++) {
             def result = randomService.nextDouble(RandomNumberGenerator.COMPLEMENTARY_MULTIPLY_WITH_CARRY)
@@ -271,7 +272,7 @@ class RandomServiceTests extends GrailsUnitTestCase {
             assertTrue result >= 0.0;
         }
     }
-    
+    */
     void testGetDouble_AES_COUNTER() {
        for(int i = 0; i<1000;i++) {
             def result = randomService.nextDouble(RandomNumberGenerator.AES_COUNTER)
@@ -321,7 +322,7 @@ class RandomServiceTests extends GrailsUnitTestCase {
             assertTrue result >= 0.0;
         }
     }
-    
+    /*
     void testGetFloat_COMPLEMENTARY_MULTIPLY_WITH_CARRY() {
         for(int i = 0; i<1000;i++) {
             def result = randomService.nextFloat(RandomNumberGenerator.COMPLEMENTARY_MULTIPLY_WITH_CARRY)
@@ -329,7 +330,7 @@ class RandomServiceTests extends GrailsUnitTestCase {
             assertTrue result >= 0.0;
         }
     }
-    
+    */
     void testGetFloat_AES_COUNTER() {
        for(int i = 0; i<1000;i++) {
             def result = randomService.nextFloat(RandomNumberGenerator.AES_COUNTER)
@@ -376,14 +377,14 @@ class RandomServiceTests extends GrailsUnitTestCase {
             assert result
         }
     }
-    
+    /*
     void testGetGaussian_COMPLEMENTARY_MULTIPLY_WITH_CARRY() {
         for(int i = 0; i<1000;i++) {
             def result = randomService.nextGaussian(RandomNumberGenerator.COMPLEMENTARY_MULTIPLY_WITH_CARRY)
             assert result
         }
     }
-    
+    */
     void testGetGaussian_AES_COUNTER() {
        for(int i = 0; i<1000;i++) {
             def result = randomService.nextGaussian(RandomNumberGenerator.AES_COUNTER)
@@ -428,14 +429,14 @@ class RandomServiceTests extends GrailsUnitTestCase {
             assertTrue result == new Boolean(true) || result == new Boolean(false);
         }
     }
-    
+    /*
     void testGetBoolean_COMPLEMENTARY_MULTIPLY_WITH_CARRY() {
         for(int i = 0; i<1000;i++) {
             def result = randomService.nextBoolean(RandomNumberGenerator.COMPLEMENTARY_MULTIPLY_WITH_CARRY)
             assertTrue result == new Boolean(true) || result == new Boolean(false);
         }
     }
-    
+    */
     void testGetBoolean_AES_COUNTER() {
        for(int i = 0; i<1000;i++) {
             def result = randomService.nextBoolean(RandomNumberGenerator.AES_COUNTER)
