@@ -2,7 +2,7 @@ class RandomGrailsPlugin {
     // the plugin version
     def version = "0.1"
     // the version or versions of Grails the plugin is designed for
-    def grailsVersion = "1.3.7 > *"
+    def grailsVersion = "1.1 > *"
     // the other plugins this plugin depends on
     def dependsOn = [:]
     // resources that are excluded from plugin packaging
@@ -11,11 +11,11 @@ class RandomGrailsPlugin {
     ]
 
     // TODO Fill in these fields
-    def author = "Your name"
-    def authorEmail = ""
-    def title = "Plugin summary/headline"
+    def author = "Jonathan Griggs"
+    def authorEmail = "jonathan.griggs@gmail.com"
+    def title = "Random - Better Random Number Generation for Grails"
     def description = '''\\
-Brief description of the plugin.
+A plugin that wraps the high-performance, statistically sound Uncommons Maths Pseudorandom Number Generators 
 '''
 
     // URL to the plugin's documentation
