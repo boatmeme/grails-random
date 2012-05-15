@@ -1,0 +1,26 @@
+<plugin name='random' version='0.2' grailsVersion='1.1 &gt; *'>
+  <author>Jonathan Griggs</author>
+  <authorEmail>jonathan.griggs@gmail.com</authorEmail>
+  <title>Random - Better Random Number Generation for Grails</title>
+  <description>\
+A plugin that wraps the high-performance, statistically sound Uncommons Maths Pseudorandom Number Generators 
+</description>
+  <documentation>http://grails.org/plugin/random</documentation>
+  <type>RandomGrailsPlugin</type>
+  <resources>
+    <resource>com.memetix.random.RandomController</resource>
+    <resource>com.memetix.random.RandomService</resource>
+    <resource>com.memetix.random.RandomTagLib</resource>
+  </resources>
+  <repositories>
+    <repository name='grailsCentral' url='http://plugins.grails.org' />
+    <repository name='http://repo.grails.org/grails/plugins' url='http://repo.grails.org/grails/plugins/' />
+    <repository name='http://repo.grails.org/grails/core' url='http://repo.grails.org/grails/core/' />
+    <repository name='grailsCore' url='http://svn.codehaus.org/grails/trunk/grails-plugins' />
+    <repository name='mavenCentral' url='http://repo1.maven.org/maven2/' />
+  </repositories>
+  <dependencies />
+  <plugins />
+  <runtimePluginRequirements />
+  <behavior />
+</plugin>

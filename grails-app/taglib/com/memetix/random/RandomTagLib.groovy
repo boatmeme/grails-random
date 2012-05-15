@@ -33,8 +33,8 @@ class RandomTagLib {
     static returnObjectForTags = ['shuffle','draw']
     
     def nextInteger = { attrs ->
-        def floor   = attrs?.floor as int;
-        def ceiling = attrs?.ceiling as int;
+        def floor   = attrs?.floor as Integer;
+        def ceiling = attrs?.ceiling as Integer;
         def rng = attrs?.rng ? RandomNumberGenerator.fromString(attrs.rng.toString()) : randomService.defaultRNG
         def random
  
@@ -51,8 +51,8 @@ class RandomTagLib {
     }
     
     def nextLong = { attrs ->
-        def floor   = attrs?.floor as long;
-        def ceiling = attrs?.ceiling as long;
+        def floor   = attrs?.floor as Long;
+        def ceiling = attrs?.ceiling as Long;
         def rng = attrs?.rng ? RandomNumberGenerator.fromString(attrs.rng.toString()) : randomService.defaultRNG
         def random
         

@@ -379,6 +379,11 @@ Future versions should include:
 
 # Change Log
 
+## v0.2 - 2012.05.15
+
+* Upgraded to Grails 2.0.3
+* Set transactional = false in RandomService
+
 ## v0.1 - 2011.06.17
 
 * Initial release

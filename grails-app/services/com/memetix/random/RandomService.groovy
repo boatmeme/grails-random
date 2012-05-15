@@ -34,7 +34,7 @@ class RandomService implements InitializingBean {
     def grailsApplication
     def defaultRNG
 
-    static transactional = true
+    static transactional = false
     
     void afterPropertiesSet() { 
         defaultRNG = grailsApplication?.config?.random?.generator?.default ? RandomNumberGenerator.fromString(grailsApplication?.config?.random?.generator?.default.toString()): RandomNumberGenerator.MERSENNE_TWISTER
